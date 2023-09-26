@@ -1,0 +1,196 @@
+:root {
+--lightred: hsl(0, 100%, 67%);
+--orangey-yellow: hsl(39, 100%, 56%);
+--greenteal: hsl(166, 100%, 37%);
+--cobalt-blue: hsl(234, 85%, 45%);
+
+--primary-red-t:  hsla(0, 100%, 67%, 10%);
+--primary-yellow-t: hsla(39, 100%, 56%, 10%); 
+--primary-green-t: hsla(166, 100%, 37%, 10%); 
+--primary-blue-t: hsla(234, 85%, 45%, 10%);
+
+--lightslate-blue-background: hsl(252, 100%, 67%);
+--lightroyal-blue-background: hsl(241, 81%, 54%);
+
+--violetblue-circle: hsla(256, 72%, 46%, 1);
+--persianblue-circle: hsla(241, 72%, 46%, 0);
+
+--white: hsl(0, 0%, 100%);
+--paleblue: hsl(221, 100%, 96%);
+--light-lavender: hsl(241, 100%, 89%);
+--darkgray-blue: hsl(224, 30%, 27%);
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;  
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    background-color: var(--white);
+    
+}
+
+body {
+    font-family: sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+.header-result {
+    display: flex; /*neben einander die zwei Felder*/
+    width: 600px;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 10px 20px 20px 20px  rgb(0,0,0, 0.4);
+}
+
+/*Your Result - BOX */
+.result {
+    width: 50%; /*result und summary müssen beide 50px haben*/
+    padding: 20px; /*größe vom Rahmen*/
+    border-radius: 20px; /*abgerundet*/
+    background: linear-gradient(var(--lightslate-blue-background),  
+                                var(--lightroyal-blue-background));
+
+    text-align: center;                                
+    display: flex;
+    flex-direction: column;
+    align-items: center; /*Your Result - 76 of 100 Great rücken in die mitte*/
+    gap: 1.5em; /*Abstand zwischen den Texten Your Result - 76 of 100 und Great ...von oben nach unten */
+
+    color: var(--white); /*schrift wird weiss*/
+}
+
+.result h2{ 
+   
+    text-align: center;
+}
+
+.summary {
+    width: 50%; /*result und summary müssen beide 50px haben*/
+    padding: 20px; 
+
+}
+
+.result h4 {
+    text-align: center;
+
+}
+.summary-result-score {
+    width: 150px; /*größe vom Kreis*/
+    height: 150px; /*größe vom Kreia*/
+
+    padding: 1em; /**/
+    margin: 0 auto;
+
+    border: none;
+    outline: none;
+    border-radius: 50%; /* Kreis 76 of 100*/
+
+    display: flex; /*text Zahlen -mitte vom Kreis*/
+    flex-direction: column; /*ober halb vom Kreis*/
+    align-items: center; /*Text mitte vom Kreis*/
+    justify-content: center;
+
+    /*kreis*/
+    background: linear-gradient(var(--violetblue-circle), var(--persianblue-circle));
+    box-shadow: inset 1px 1px 12px 0px;
+}
+.summary-result-score span {
+    margin: 0 0.3em 0 0.3em; /*of 100*/
+    padding: 0.1em 0.1em; /*mittig*/
+    font-size: 3em; /*schrift größe von 76*/
+    font-weight: bold; /*größe von 76*/
+
+    color: var(--white);
+}
+
+.score-con {
+    display: flex;
+}
+
+
+.score{ /* hier statt score-reaction nur score unten aber score-memory*/
+    display: flex;
+    justify-content: space-between;
+    color: var(--lightred); 
+   
+    background-color:var(--primary-red-t);
+    margin-bottom: 15px; /*Abstand von Rahmen zu Rahmen */
+    padding: 15px; /*Rahmen größe oder auch Sbastand vom text im Rahmen*/
+    border-radius: 10px; /*Rahmen abgerundet*/
+}
+.grey {
+    color: rgba(87,87,87, 0.992);
+}
+.score-con img {
+    margin-right: 5px; /*Abstand ziwschen Icon und Reaction*/   
+}
+.black-text {
+    color: #222; /*erste Zahl z.b. 80 */
+    font-weight: bold;
+}
+
+.score-memory { /*gleich wie oben score-reaction*/  
+    color: var(--orangey-yellow); 
+    background-color:var(--primary-yellow-t);  
+    
+}
+.score-verbal {
+    color: var(--greenteal); 
+    background-color:var(--primary-green-t);  
+}
+.score-visual {
+    color: var(--cobalt-blue); 
+    background-color:var(--primary-blue-t);  
+}
+button {
+    margin-top: 30px; /*Abstand button zu visual Rahmen */
+    padding: 15px 30px; /*größe = LÄNGE und BREITE vom BUTTON*/
+    border: none;
+    outline: none;
+    color: var(--white);
+    background-color: var(--darkgray-blue);
+    width: 100%; 
+    border-radius: 20px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (min-width:760px) {
+    .result {
+        width: 100%;
+        padding: 0px;
+        border-radius: 0px;
+        border-bottom-left-radius: 20px;
+        border-bottom-right-radius: 20px;
+    }
+    .summary {
+        padding: 0;
+        width: 80%;
+        margin: 0 auto;
+    }
+    h4 {
+        padding: 20px;
+        text-align: center;
+    }
+    .header-result {
+        width: 100%;
+        flex-direction: column;
+        border-radius: 0px;
+        overflow: hidden;
+        padding: 0;
+    }
+}
